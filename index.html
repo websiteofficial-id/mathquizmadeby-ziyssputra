@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Math Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- ================= MENU ================= -->
+
+<div id="menu" class="glass">
+
+<h1>🧮 Math Quiz</h1>
+
+<p class="subtitle">
+Latihan Ujian Matematika
+</p>
+
+<div class="info">
+
+<div>
+📚
+<span>40 Soal Random</span>
+</div>
+
+<div>
+⏰
+<span>60 Menit</span>
+</div>
+
+<div>
+🏆
+<span>Nilai Maksimal 100</span>
+</div>
+
+</div>
+
+<button id="startBtn">
+Mulai Ujian
+</button>
+
+</div>
+
+<!-- ================= QUIZ ================= -->
+
+<div id="quiz" class="glass hidden">
+
+<div class="topBar">
+
+<div class="timer">
+
+⏰
+
+<span id="timer">
+
+60:00
+
+</span>
+
+</div>
+
+<div class="score">
+
+⭐
+
+<span id="score">
+
+0
+
+</span>
+
+</div>
+
+</div>
+
+<div class="progress">
+
+<div id="progress"></div>
+
+</div>
+
+<div class="number">
+
+Soal
+
+<span id="current">
+
+1</span>
+
+/
+
+<span id="total">
+
+40</span>
+
+</div>
+
+<h2 id="question">
+
+Memuat soal...
+
+</h2>
+
+<div id="answers">
+
+<button class="answer" onclick="chooseAnswer(0)"></button>
+
+<button class="answer" onclick="chooseAnswer(1)"></button>
+
+<button class="answer" onclick="chooseAnswer(2)"></button>
+
+<button class="answer" onclick="chooseAnswer(3)"></button>
+
+</div>
+
+<div id="message">
+
+</div>
+
+</div>
+
+<!-- ================= RESULT ================= -->
+
+<div id="result" class="glass hidden">
+
+<h1>
+
+🎉 Hasil Ujian
+
+</h1>
+
+<h2 id="nilai">
+
+100
+
+</h2>
+
+<div class="resultBox">
+
+<p>
+✅ Benar :
+<span id="benar">
+0
+</span>
+</p>
+
+<p>
+❌ Salah :
+<span id="salah">
+0
+</span>
+</p>
+
+<p>
+⭕ Kosong :
+<span id="kosong">
+0
+</span>
+</p>
+
+<p>
+🏅 Predikat :
+<span id="grade">
+A
+</span>
+</p>
+
+<p>
+🥇 High Score :
+<span id="highscore">
+0
+</span>
+</p>
+
+</div>
+
+<button onclick="location.reload()">
+
+Main Lagi
+
+</button>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
